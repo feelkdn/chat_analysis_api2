@@ -9,7 +9,7 @@ from word_frequency_analyzer import WordFrequencyAnalyzer
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route('/analyze-file', methods=['POST'])
+@app.route('/analyze-file/', methods=['POST'])
 def analyze_file():
     file = request.files.get('chat_file')
     if not file:
