@@ -1,6 +1,4 @@
-﻿# app/routes/routes.py
-
-from flask import Blueprint, request, jsonify
+﻿from flask import Blueprint, request, jsonify, make_response
 from app.services.nlp04 import KakaoAnalyzer
 from app.services.word_frequency_analyzer import WordFrequencyAnalyzer
 import os
@@ -8,8 +6,16 @@ import tempfile
 
 analysis_bp = Blueprint('analysis', __name__)
 
-@analysis_bp.route('/analyze-file', methods=['POST'])
+@analysis_bp.route('/analyze-file', methods=['POST', 'OPTIONS'])
 def analyze_file():
+    # 👉 OPTIONS 요청 처리 (CORS preflight)
+    if request.method == 'OPTIONS':
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+        return response, 204
+
     file = request.files.get('chat_file')
     if not file:
         return jsonify({'error': '파일이 없습니다.'}), 400
