@@ -1,4 +1,4 @@
-# app/routes/routes.py
+ï»¿# app/routes/routes.py
 from flask import Blueprint, request, jsonify
 import os
 import tempfile
@@ -11,7 +11,7 @@ bp = Blueprint('routes', __name__)
 def analyze_file():
     file = request.files.get('chat_file')
     if not file:
-        return jsonify({'error': 'ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.'}), 400
+        return jsonify({'error': 'íŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤.'}), 400
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".txt") as tmp:
         file.save(tmp.name)
@@ -34,16 +34,16 @@ def analyze_file():
                 "partner": partner_words
             },
             "topics": [
-                {"name": "ÀÏ»ó", "percentage": 0.4, "color": "#3B82F6"},
-                {"name": "°¨Á¤", "percentage": 0.3, "color": "#EF4444"},
-                {"name": "Ãë¹Ì", "percentage": 0.3, "color": "#6366F1"}
+                {"name": "ì¼ìƒ", "percentage": 0.4, "color": "#3B82F6"},
+                {"name": "ê°ì •", "percentage": 0.3, "color": "#EF4444"},
+                {"name": "ì·¨ë¯¸", "percentage": 0.3, "color": "#6366F1"}
             ],
             "topicTimeline": {
-                "timestamps": ["¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä", "ÀÏ"],
+                "timestamps": ["ì›”", "í™”", "ìˆ˜", "ëª©", "ê¸ˆ", "í† ", "ì¼"],
                 "topics": {
-                    "ÀÏ»ó": [10, 20, 15, 30, 25, 10, 5],
-                    "°¨Á¤": [5, 10, 20, 15, 10, 30, 40],
-                    "Ãë¹Ì": [10, 5, 10, 15, 20, 25, 30]
+                    "ì¼ìƒ": [10, 20, 15, 30, 25, 10, 5],
+                    "ê°ì •": [5, 10, 20, 15, 10, 30, 40],
+                    "ì·¨ë¯¸": [10, 5, 10, 15, 20, 25, 30]
                 }
             }
         })
