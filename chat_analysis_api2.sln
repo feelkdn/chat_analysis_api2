@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "chat_analysis_api2", "chat_analysis_api2\chat_analysis_api2.pyproj", "{7FFE5591-8FEA-4B23-8BA2-6C712753D31F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FFE5591-8FEA-4B23-8BA2-6C712753D31F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFE5591-8FEA-4B23-8BA2-6C712753D31F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {228CCCB6-204D-4652-9C77-578FA5DD00FA}
+	EndGlobalSection
+EndGlobal
