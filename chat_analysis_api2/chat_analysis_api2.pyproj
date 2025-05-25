@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7ffe5591-8fea-4b23-8ba2-6c712753d31f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>chat_analysis_api2.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,14 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.py" />
-    <Compile Include="chat_analysis_api2.py" />
-    <Compile Include="nlp04.py" />
-    <Compile Include="word_frequency_analyzer.py" />
+    <Compile Include="app\routes\routes.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="run.py" />
+    <Compile Include="app\nlp04.py" />
+    <Compile Include="app\word_frequency_analyzer.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\routes\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
