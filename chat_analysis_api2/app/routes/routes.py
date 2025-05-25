@@ -1,13 +1,14 @@
 ﻿# app/routes/routes.py
+
 from flask import Blueprint, request, jsonify
-import os
-import tempfile
 from app.services.nlp04 import KakaoAnalyzer
 from app.services.word_frequency_analyzer import WordFrequencyAnalyzer
+import os
+import tempfile
 
-bp = Blueprint('routes', __name__)
+analysis_bp = Blueprint('analysis', __name__)
 
-@bp.route('/analyze-file', methods=['POST'])
+@analysis_bp.route('/analyze-file', methods=['POST'])
 def analyze_file():
     file = request.files.get('chat_file')
     if not file:

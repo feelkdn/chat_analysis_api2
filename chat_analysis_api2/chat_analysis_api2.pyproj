@@ -23,10 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\routes\routes.py" />
+    <Compile Include="app\routes\__init__.py" />
+    <Compile Include="app\services\__init__.py" />
     <Compile Include="app\__init__.py" />
     <Compile Include="run.py" />
-    <Compile Include="app\nlp04.py" />
-    <Compile Include="app\word_frequency_analyzer.py" />
+    <Compile Include="app\services\nlp04.py" />
+    <Compile Include="app\services\word_frequency_analyzer.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procfile" />
@@ -34,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="app\services\" />
     <Folder Include="app\routes\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
