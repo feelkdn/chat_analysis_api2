@@ -7,7 +7,8 @@ from nlp04 import KakaoAnalyzer
 from word_frequency_analyzer import WordFrequencyAnalyzer
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+# ✅ 전체 origin 허용 및 credentials 지원 포함
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 @app.route('/analyze-file', methods=['POST'])
 def analyze_file():
