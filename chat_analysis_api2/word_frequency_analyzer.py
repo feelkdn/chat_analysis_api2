@@ -1,4 +1,4 @@
-import re
+ï»¿import re
 from collections import Counter
 
 class WordFrequencyAnalyzer:
@@ -9,7 +9,7 @@ class WordFrequencyAnalyzer:
         with open(file_path, 'r', encoding='utf-8') as f:
             text = f.read()
 
-        # ÇÑ±Û°ú ¶ç¾î¾²±â¸¸ ³²±â°í Á¦°Å
+        # í•œê¸€ê³¼ ë„ì–´ì“°ê¸°ë§Œ ë‚¨ê¸°ê³  ì œê±°
         cleaned = re.sub(r"[^\uAC00-\uD7A3a-zA-Z0-9\s]", "", text)
         words = cleaned.split()
         counter = Counter(words)
